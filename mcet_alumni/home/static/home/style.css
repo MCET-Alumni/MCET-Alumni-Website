@@ -1,0 +1,355 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-image: url(https://flevix.com/wp-content/uploads/2020/07/Red-Blue-Abstract-Background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+:root {
+    --carouselWidth:70vw;
+    font-size: 62.5%;
+    --carouselHeight:500px;
+}
+
+.navbar 
+{
+    height: 70px;
+    border: 2px solid blue;
+    padding-left: 45%;
+    font-size: 2rem;
+    font-weight: 700;
+    text-shadow: 2px 2px snow;
+    color: blue;
+}
+
+.center {
+    margin-left: 15vw;
+}
+.carousel {
+    width: var(--carouselWidth);
+    
+    /* border: 5px solid red; */
+    
+}
+
+.carousel-item img
+{
+    height: var(--carouselHeight);
+    
+}
+
+.mainContainer 
+{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    align-items: center;
+    width: var(--carouselWidth);
+}
+
+.mainContainer .content {
+    display: flex;
+    width: var(--carouselWidth);
+}
+.mainContainer .content hr {
+    color: white;
+    font-weight: 900;
+    font-size: 1.5rem;
+    
+}
+
+.sixty {
+    width: 60%;
+    background-color: aqua;
+    /* text-align: center; */
+    padding: 10px;
+}
+.forty {
+    width: 40%;
+    background-color: lightpink;
+    /* text-align: center; */
+    padding: 10px;
+}
+
+.mainContainer .content .title {
+    /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
+    color:white;
+    font-size: 2.5rem;
+}
+
+.alumniDiscription {
+    font-family: "Nunito", sans-serif;
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+}
+
+.mainContainer .content .firstContent {
+    background-color: #01679B;
+}
+.mainContainer .content .donationLink {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.342) , rgba(0, 0, 0, 0.377)), url(https://img.freepik.com/free-photo/couple-holding-hands-green-meadow_1150-26188.jpg?t=st=1648271358~exp=1648271958~hmac=970d7780ccd6dc9a6d27f2fe00c93c39a0e66a7bf2b948b1b0237562f2200c24&w=996);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    
+}
+.donationContent {
+    padding: 10px;
+    /* border: 2px solid black; */
+}
+ .donationQuote {
+    font-size: 2.8rem;
+}
+
+.donateBtn {
+    font-size: 1.7rem;
+    margin: 10px 0px 0px 20px;
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 29px;
+    padding: 10px 30px;
+    color: white;
+    font-weight: 500;
+    transition: .5s;
+}
+
+.donateBtn:hover {
+    background-color: rgb(12, 184, 12);
+}
+
+.notableAlumini {
+    height: 250px;
+    text-align: center;
+    padding-top: 120px;
+    background:linear-gradient(rgba(0, 0, 0, 0.616) , rgba(0, 0, 0, 0.432)), url(https://img.freepik.com/free-photo/group-diverse-grads-throwing-caps-up-sky_53876-56031.jpg?size=626&ext=jpg&ga=GA1.1.1012302461.1630052366);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.members {
+    height: 250px;
+    text-align: center;
+    padding-top: 120px;
+    background: linear-gradient(rgba(0, 0, 0, 0.479) , rgba(0, 0, 0, 0.5)) , url(https://img.freepik.com/free-photo/four-team-members-expressing-togetherness_1262-18484.jpg?size=626&ext=jpg&ga=GA1.2.1012302461.1630052366);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+
+/* responsive code */
+
+@media screen and (max-width: 1200px) {
+    :root {
+        --carouselWidth:100vw;
+        /* font-size: 62.5%; */
+    }
+    .center {
+        margin-left: 0px;
+    }
+}
+
+@media screen and (max-width: 1050px) {
+    .donationQuote {
+        font-size: 2.5rem;
+    }
+}
+@media screen and (max-width: 940px) {
+    .donationContent {
+        padding: 5px;
+    }
+    .donationQuote {
+        font-size: 2.2rem;
+    }
+}
+@media screen and (max-width: 844px) {
+    
+    :root {
+        font-size: 57%;
+    }
+}
+@media screen and (max-width: 770px) {
+    
+    .donationQuote {
+        font-size: 2rem;
+        
+    }
+}
+@media screen and (max-width: 700px) {
+    
+    .mainContainer .content {
+        display: block;
+        
+    }
+    .sixty {
+        width: 100%;
+        
+    }
+    .forty {
+        width: 100%;
+        
+    }
+
+    .donationQuote {
+        font-size: 2.8rem;
+    }
+    .donateBtn {
+        font-size: 2rem;
+    }
+
+    :root {
+        --carouselHeight:300px; 
+    }
+}
+
+/* CSS for Header */
+
+.animated {
+    -webkit-animation-duration: 0.3s;
+    animation-duration: 0.3s;
+}
+
+
+.cdesc-container {
+    background-color: #eee;
+    margin: 5px 5px 4px 5px;
+    
+    border-radius: 10px;
+    /* text-align: center; */
+    border: solid;
+    border-color: #085379;
+    border-width: 3px;
+}
+
+.clogo {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    width: 100px;
+    height: 100px;
+}
+
+.cdesc {
+    text-align: center;
+}
+
+.cdesc h1 {
+    font-family: Ubuntu;
+    font-size: 3rem;
+    font-weight: 600;
+    color: #0570a7;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.cdesc h3 {
+    font-family: Roboto;
+    font-size: 1.5rem;
+    font-weight: 400;
+    color: #101314;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+
+
+@media screen and (max-width: 768px) {
+    .cdesc h1 {
+        font-size: 1.5rem;
+    }
+    .cdesc h3 {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width:480px) {
+    .cdesc h1 {
+        font-size: 1.5rem;
+    }
+    .cdesc h3 {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width:365px) {
+    .cdesc h1 {
+        font-size: 1.5rem;
+    }
+    .cdesc h3 {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width:350px) {
+    .cdesc h1 {
+        font-size: 1.5rem;
+    }
+    .cdesc h3 {
+        font-size: 0.8rem;
+    }
+}
+
+@media only screen and (max-width:300px) {
+    .cdesc h1 {
+        font-size: 1.5rem;
+    }
+    .cdesc h3 {
+        font-size: 0.8rem;
+    }
+}
+    /* CSS For Header ends */
+
+    /* CSS for Footer */
+
+    /*Hyper Links*/
+        .hyperlink {
+            color: #ffffff;
+            text-decoration: none;
+            text-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+            transition: text-shadow 0.3s;
+            cursor: pointer;
+        }
+        .hyperlink:hover {
+            color: #c6d6e4;
+            text-decoration: none;
+            text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+            transition: text-shadow 0.3s;
+        }
+        /*Social Buttons Style*/
+        .sb {
+            width: 40px;
+            height: 40px;
+            border-radius: 100%;
+            box-shadow: 0 1px 0.4rem rgba(0, 0, 0, 0.5);
+            transition: box-shadow 0.3s;
+            line-height: 40px;
+            font-size: 20px;
+            text-align: center;
+            color: #ffffff;
+            cursor: hand;
+        }
+        .sb:hover {box-shadow: 0 1px 0.4rem rgba(0, 0, 0, 1.0); transition: box-shadow 0.3s;}
+        .fb {
+            background: #3B5998;
+        }
+        .tt {
+            background: #1DA1F2;
+        }
+        .in {
+            background: #0077b5;
+        }
+    
+        

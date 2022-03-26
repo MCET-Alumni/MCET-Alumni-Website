@@ -1,0 +1,87 @@
+{% extends "home/index.html" %}
+
+{% block title %}
+<title>MCET Alumni</title>
+{% endblock title %}
+
+{% block content %}
+
+<!-- carousel code begin -->
+
+    <div class="carouselContainer">
+        <div id="carouselExampleIndicators" class="carousel slide center mb-2" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="https://wallpaperaccess.com/full/1522635.jpg" class="d-block w-100 img-fluid" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" class="d-block w-100 img-fluid" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.freewalldownload.com/waterfalls-images/waterfall-hd-4k-wallpaper.jpg" class="d-block w-100 img-fluid" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://cdn.pixabay.com/photo/2016/11/19/18/57/godafoss-1840758__480.jpg" class="d-block w-100 img-fluid" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="https://www.freewalldownload.com/waterfalls-images/waterfall-hd-4k-wallpaper.jpg" class="d-block w-100 img-fluid" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+  
+<!-- carousel code end -->
+  
+<!-- mainSection code start -->
+    <div class="mainContainer center mb-2">
+        <div class="content">
+            <div class="leftContent sixty firstContent">
+                <h1 class="title ">Welcome to All Alumni</h1>
+                <hr>
+                <p class="alumniDiscription">The Association serves to connect alumni by organizing events and activities that assist alumni’s professional and career development; benefit students or give back to alma mater;and enhance alumni’s social and professional network.
+  
+                <br> <br> We welcome all the graduates of Murshidabad College of Engineering and Technology to get connected and collaborate with all our alumni using our mobile application and website.
+                      
+                <br> <br> Please signup and be part of a strong global alumni network of MCET graduates</p>
+            </div>
+            <div class="rightContent forty donationLink">
+                <div class="donationContent">
+                    <h3 class="title donationQuote">Greatness is not what we have,<br>It's what we give</h3>
+                    <button class="donateBtn">Donate</button>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftContent forty notableAlumini">
+                <h1 class="title">Notable Alumini</h1>
+            </div>
+            <div class="rightContent sixty">
+                <h1 class="title">Up Coming Event</h1>
+            </div>
+        </div>
+        <div class="content">
+            <div class="leftContent sixty members">
+                <h1 class="title">Members</h1>
+            </div>
+            <div class="rightContent forty">
+                <h1 class="title">Alumini Gallery</h1>
+            </div>
+        </div>
+    </div>
+<!-- mainSection code end -->
+{% endblock content %}
