@@ -28,7 +28,7 @@ admin.site.site_title = 'Adminsitration'
 
 urlpatterns = [
     path('', include('home.urls')),
-    # path('/alumni', include('alumni.urls')),
+    path('alumni/', include('alumni.urls')),
     path('admin/', admin.site.urls),
 ]+static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
