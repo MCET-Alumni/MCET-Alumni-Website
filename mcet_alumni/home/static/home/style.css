@@ -91,7 +91,19 @@ body{
     background-color: #01679B;
 }
 .mainContainer .content .donationLink {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.342) , rgba(0, 0, 0, 0.377)), url(https://img.freepik.com/free-photo/couple-holding-hands-green-meadow_1150-26188.jpg?t=st=1648271358~exp=1648271958~hmac=970d7780ccd6dc9a6d27f2fe00c93c39a0e66a7bf2b948b1b0237562f2200c24&w=996);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.342) , rgba(0, 0, 0, 0.377)), url(https://i0.wp.com/www.giveindia.org/blog/wp-content/uploads/shutterstock_548067985.jpeg?fit=1463%2C977&ssl=1);
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 8px;
+    
+}
+
+.mainContainer .content .gallery {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.342) , rgba(0, 0, 0, 0.377)), url(https://cdn.wallpapersafari.com/63/25/HFXrUe.jpg);
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
