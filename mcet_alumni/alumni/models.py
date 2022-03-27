@@ -16,7 +16,8 @@ department_choices = (
     ('cse', 'Computer Science and Engineering'),
     ('ece', 'Electrics and communication Engineering'),
     ('ce', 'Civil Engineering'),
-    ('ee', 'Electrical Engineering') 
+    ('ee', 'Electrical Engineering'),
+    ('it', 'Information Technology')
 )
 
 status_choices = (
