@@ -4,17 +4,31 @@ from django.contrib import admin
 
 from . import models
 
-class DepartmentAdmin(admin.ModelAdmin):
-
-    ''' Admin class for Department model.'''
-
-    list_display = ['name']
-    search_fields = ['name']
 
 class AlumniAdmin(admin.ModelAdmin):
     ''' Admin class for Alumni model'''
 
-    list_display = ['batch', 'department', 'first_name', 'last_name', 'gender', 'email']
+    list_display = ['email', 'first_name', 'last_name', 'batch', 'department','phone1', 'gender', 'profile_pic']
+    readonly_fields = ('added_by', 'add_date', 'last_modified', 'modified_by')
+    fieldsets = (
+        ('Academic', {
+            'fields':(('batch', 'department'),)
+        }),
+        ('Personal Details', {
+            'fields':(('first_name', 'last_name'), ('phone1', 'phone2'),('email', 'gender'), ('social_site_url', 'profile_pic'),'current_location')
+        }),
+        ('Admin Action', {
+            'fields':(('status','added_by', 'add_date'),('last_modified', 'modified_by'))
+        })
+    )
+    date_hierarchy = 'last_modified'
+    list_filter = ('batch', 'department', 'gender', 'status')
+    
 
-admin.site.register(models.Department, DepartmentAdmin)
+    def save_model(self, request, obj, form, change):
+        if getattr(obj, 'added_by', None) is None:
+            obj.added_by = request.user
+        obj.modified_by = request.user
+        obj.save()
+
 admin.site.register(models.Alumni, AlumniAdmin)
