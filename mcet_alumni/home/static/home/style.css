@@ -5,10 +5,7 @@
 }
 
 body{
-    background-image: url(https://flevix.com/wp-content/uploads/2020/07/Red-Blue-Abstract-Background.jpg);
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
+    background-color: rgb(184, 236, 232);
 }
 
 :root {
@@ -66,7 +63,7 @@ body{
 
 .sixty {
     width: 60%;
-    background-color: aqua;
+    background-color: #007EB8;
     /* text-align: center; */
     padding: 10px;
 }
@@ -84,7 +81,7 @@ body{
 }
 
 .alumniDiscription {
-    font-family: "Nunito", sans-serif;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     color: white;
     font-weight: 500;
     font-size: 1.8rem;
@@ -125,7 +122,7 @@ body{
 }
 
 .donateBtn:hover {
-    background-color: rgb(12, 184, 12);
+    background-color: #00679b;
 }
 
 .notableAlumini {
@@ -215,6 +212,8 @@ body{
     }
 }
 
+
+
 /* CSS for Header */
 
 .animated {
@@ -244,6 +243,7 @@ body{
 
 .cdesc {
     text-align: center;
+    margin:auto 0 auto 30px;
 }
 
 .cdesc h1 {
@@ -311,6 +311,8 @@ body{
     }
 }
     /* CSS For Header ends */
+
+
 
     /* CSS for Footer */
 
