@@ -68,7 +68,10 @@
         </div>
         <div class="content">
             <div class="leftContent forty notableAlumini">
-                <h1 class="title">Notable Alumini</h1>
+                <a href="{% url 'notable_alumni' %}" style="text-decoration: none;">
+                    <h1 class="title">Notable Alumini</h1>
+                </a>
+                
             </div>
             <div class="rightContent sixty">
                 <h1 class="title text-center">Upcoming Events</h1>
@@ -87,10 +90,15 @@
         </div>
         <div class="content">
             <div class="leftContent sixty members">
-                <h1 class="title">Members</h1>
+                <a href="{% url 'alumni' %}" style="text-decoration: none;">
+                    <h1 class="title">Members</h1>
+                </a>
+                
             </div>
             <div class="rightContent forty gallery">
-                <h1 class="title">Alumini Gallery</h1>
+                <a href="{%url 'gallery' %}" style="text-decoration: none;">
+                    <h1 class="title">Alumni Gallery</h1>
+                </a>
             </div>
         </div>
     </div>
