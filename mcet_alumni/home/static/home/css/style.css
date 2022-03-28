@@ -366,4 +366,8 @@ body{
             background: #0077b5;
         }
     
-        
+/* form design inputs */
+.form_input {
+    margin-bottom: 1rem;
+    padding: 6px;
+}

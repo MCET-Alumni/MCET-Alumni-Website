@@ -4,8 +4,26 @@
 <title>MCET Alumni</title>
 {% endblock title %}
 
-{% block content %}
-<div>
-    <h2> This is alumni page </h2>
+{% load crispy_forms_tags %}
+
+{% block content %} 
+<div class="container mb-4">
+    <form method="post" class="form-inline">
+        {% csrf_token %}
+
+        <div class="row">
+            <div class="col-12 col-md-4  ">
+                <label for="{{ form.dept_name.id_for_label }}"> Department </label>
+                {{ form.dept_name }}
+            </div>
+            <div class="col-12col-3 col-md-2 ">
+                <label for="{{ form.semester.id_for_label }}"> Batch </label>
+                {{ form.batch }}
+            </div>
+            <div class="col-12 col-md-2  pt-4">
+                <button type="submit" class="btn btn-primary"> Update </button>
+            </div>
+        </div>
+    </form>
 </div>
-{% endblock content %}
+{% endblock content %} 
