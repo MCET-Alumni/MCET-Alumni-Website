@@ -1,4 +1,5 @@
 {% extends "home/index.html" %}
+{% load static %} 
 
 {% block title %}
 <title>MCET Alumni</title>
@@ -16,22 +17,35 @@
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
                 <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="5" aria-label="Slide 6"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="6" aria-label="Slide 7"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="7" aria-label="Slide 8"></button>
+
             </div>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img src="https://wallpaperaccess.com/full/1522635.jpg" class="d-block w-100 img-fluid" alt="...">
+                    <img src="{% static 'home/images/main_image.webp' %}" class="d-block w-100 img-fluid" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://images.unsplash.com/photo-1432405972618-c60b0225b8f9?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxleHBsb3JlLWZlZWR8MXx8fGVufDB8fHx8&w=1000&q=80" class="d-block w-100 img-fluid" alt="...">
+                    <img src="{% static 'home/images/principal.webp' %}" class="d-block w-100 img-fluid" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://www.freewalldownload.com/waterfalls-images/waterfall-hd-4k-wallpaper.jpg" class="d-block w-100 img-fluid" alt="...">
+                    <img src="{% static 'home/images/candle_light.JPG' %}" class="d-block w-100 img-fluid" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://cdn.pixabay.com/photo/2016/11/19/18/57/godafoss-1840758__480.jpg" class="d-block w-100 img-fluid" alt="...">
+                    <img src="{% static 'home/images/corus2k16.JPG' %}" class="d-block w-100 img-fluid" alt="...">
                 </div>
                 <div class="carousel-item">
-                    <img src="https://www.freewalldownload.com/waterfalls-images/waterfall-hd-4k-wallpaper.jpg" class="d-block w-100 img-fluid" alt="...">
+                    <img src="{% static 'home/images/seminar_hall.JPG' %}" class="d-block w-100 img-fluid" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'home/images/ground.JPG' %}" class="d-block w-100 img-fluid" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'home/images/Library.jpg' %}" class="d-block w-100 img-fluid" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'home/images/saraswati_puja.JPG' %}" class="d-block w-100 img-fluid" alt="...">
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
