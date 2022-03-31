@@ -2,7 +2,7 @@
 
 from email.policy import default
 from django.db import models
-from django.core.validators import MinLengthValidator, MaxLengthValidator, MinValueValidator
+from django.core.validators import MinLengthValidator, MaxLengthValidator
 from django.contrib.auth.models import User
 
 from .helpers import validate_image_size
@@ -22,16 +22,18 @@ department_choices = (
 )
 
 status_choices = (
-    ('Approved', 'Approved'),
-    ('Pending', 'Pending'),
-    ('Rejected', 'Rejected'),
+    (str(1), 'Approved'),
+    (str(2), 'Pending'),
+    (str(3), 'Rejected'),
 )
+
+batch_choices = [(str(i),str(i)) for i in range(2002, 2022)]
 
 class Alumni(models.Model):
     
     ''' Stores the alumni model information.'''
 
-    batch = models.IntegerField(validators=[MinValueValidator(1998)])
+    batch = models.CharField(max_length=5, choices=batch_choices)
     department = models.CharField(max_length=5, choices=department_choices)
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
@@ -62,3 +64,12 @@ class Alumni(models.Model):
         ''' str representation for user object.'''
 
         return self.email
+
+class Gallery(models.Model):
+    batch = models.CharField(max_length=5, choices=batch_choices)
+    photo = models.ImageField(
+        upload_to = 'gallery/',
+        validators = [validate_image_size],
+        null = True,
+        blank = True,
+    )

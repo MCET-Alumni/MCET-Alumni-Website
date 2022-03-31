@@ -420,9 +420,9 @@ body {
   /* mak images fill their container*/
   img {
     max-width: 100%;
+    
   }
   .gal-img:hover {
-    opacity: 0.5;
     cursor: pointer;
   }
   

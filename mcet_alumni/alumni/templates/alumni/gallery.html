@@ -1,0 +1,17 @@
+{% extends "home/index.html" %}
+
+{% block title %}
+<title>MCET Gallery </title>
+{% endblock title %}
+
+{% block content %}
+<div class="mb-3">
+    <div class="container">
+        <div class="img-grid">
+            {% for url in photos_urls %}
+            <img class="gal-img" src="{{ url }}" alt="">
+            {% endfor %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

@@ -31,4 +31,11 @@ class AlumniAdmin(admin.ModelAdmin):
         obj.modified_by = request.user
         obj.save()
 
+class GalleryAdmin(admin.ModelAdmin):
+    '''Admin class for gallery.'''
+
+    list_display = ['batch', 'photo']
+    list_filter = ['batch']
+
 admin.site.register(models.Alumni, AlumniAdmin)
+admin.site.register(models.Gallery, GalleryAdmin)

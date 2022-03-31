@@ -1,6 +1,6 @@
 from django.shortcuts import render
 
-from .models import Alumni
+from .models import Alumni, Gallery
 from .forms import DepartmentBatchForm
 
 # Create your views here.
@@ -11,7 +11,7 @@ def alumni(request):
         if form.is_valid():
             dept_name = form.cleaned_data['dept_name']
             batch = form.cleaned_data['batch']
-            querset = Alumni.objects.filter(department = dept_name, batch=batch, status = 'Approved')
+            querset = Alumni.objects.filter(department = dept_name, batch=batch, status = 1)
             alumunis= []
             for alumni in querset:
                 tmp= {}
@@ -36,3 +36,9 @@ def alumni_speaks(request):
 
 def register(request):
     return render(request, 'alumni/register.html')
+
+def gallery(request):
+    batch = request.POST.get('batch', 2002)
+    queryset = Gallery.objects.filter(batch = batch)
+    photos_urls = [obj.photo.url for obj in queryset]
+    return render(request, 'alumni/gallery.html', {'photos_urls':photos_urls}) 
