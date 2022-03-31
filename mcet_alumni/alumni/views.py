@@ -18,7 +18,10 @@ def alumni(request):
                 tmp['name'] = alumni.first_name + ' ' + alumni.last_name
                 tmp['batch'] = alumni.batch
                 tmp['department'] = alumni.department
-                tmp['photo'] = alumni.profile_pic.url
+                if alumni.profile_pic:
+                    tmp['photo'] = alumni.profile_pic.url
+                else:
+                    tmp['photo'] = '/media/profile_pics/default.jpg'
                 tmp['linked_url'] = alumni.linked_url
                 alumunis.append(tmp)
             context['alumunis'] = alumunis
