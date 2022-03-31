@@ -4,42 +4,51 @@
 <title>MCET Alumni</title>
 {% endblock title %}
 
-{% block content %} 
+{% block content %}
 <div class="container mb-4">
-{% if msg%}
-<div class="alert alert-primary" role="alert">
-    {{msg}}
-</div> 
-{% endif %}
+    {% if msg%}
+    <div class="alert alert-primary" role="alert">
+        {{msg}}
+    </div>
+    {% endif %}
     <form method="post" class="form-inline">
         {% csrf_token %}
-        <div class="row">
+        <div class="row" style="font-size: 17px;">
             <div class="col-12 col-md-4  ">
                 <label for="{{ form.dept_name.id_for_label }}"> Department </label>
                 {{ form.dept_name }}
             </div>
-            <div class="col-12col-3 col-md-2 ">
+            <div class="col-12 col-3 col-md-2 ">
                 <label for="{{ form.semester.id_for_label }}"> Batch </label>
                 {{ form.batch }}
             </div>
             <div class="col-12 col-md-2  pt-4">
-                <button type="submit" class="btn btn-primary"> Update </button>
+                <button type="submit" style="font-size: 17px;" class="btn btn-primary mt-2"> Update </button>
             </div>
         </div>
 
-        {% if alumunis %}
-        <div>
-            {% for alumni in alumunis %}
-            <div class="card" style="width: 18rem;">
-                <img class="card-img-top" src="{{alumni.photo }}" alt="Card image cap">
-                <div class="card-body">
-                  <p class="card-text"> {{ alumni.name }} {{ alumni.batch }}</p>
-                  <p>{{alumni.department}}</p> 
-                  <p>{{alumni.photo}}</p>
-              </div>
-            {% endfor %}
-        </div>
-        {% endif %}
     </form>
 </div>
-{% endblock content %} 
+
+{% if alumunis %}
+<div class="container">
+    <div class="row ">
+        {% for alumni in alumunis %}
+        <div class=" col-md-4">
+            <figure class="snip0056">
+                <figcaption>
+                    <h2>{{ alumni.name }}</h2>
+                    <p>{{alumni.department}} <span>{{ alumni.batch }}</span></p>
+                </figcaption>
+                <img src="{{alumni.photo }}" alt="alumni-proflie" />
+                <div class="position"></div>
+            </figure>
+        </div>
+
+        {% endfor %}
+    </div>
+
+</div>
+
+{% endif %}
+{% endblock content %}
