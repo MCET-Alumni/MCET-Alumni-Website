@@ -1,21 +1,22 @@
-*{
+@import url(https://fonts.googleapis.com/css?family=Raleway:400,200,300,800);
+
+* {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: rgb(184, 236, 232);
 }
 
 :root {
-    --carouselWidth:70vw;
+    --carouselWidth: 70vw;
     font-size: 62.5%;
-    --carouselHeight:500px;
+    --carouselHeight: 500px;
 }
 
-.navbar 
-{
+.navbar {
     height: 70px;
     border: 2px solid blue;
     padding-left: 45%;
@@ -28,21 +29,20 @@ body{
 .center {
     margin-left: 15vw;
 }
+
 .carousel {
     width: var(--carouselWidth);
-    
+
     /* border: 5px solid red; */
-    
+
 }
 
-.carousel-item img
-{
+.carousel-item img {
     height: var(--carouselHeight);
-    
+
 }
 
-.mainContainer 
-{
+.mainContainer {
     display: flex;
     flex-flow: column wrap;
     justify-content: center;
@@ -54,11 +54,12 @@ body{
     display: flex;
     width: var(--carouselWidth);
 }
+
 .mainContainer .content hr {
     color: white;
     font-weight: 900;
     font-size: 1.5rem;
-    
+
 }
 
 .sixty {
@@ -67,6 +68,7 @@ body{
     /* text-align: center; */
     padding: 10px;
 }
+
 .forty {
     width: 40%;
     background-color: lightpink;
@@ -76,7 +78,7 @@ body{
 
 .mainContainer .content .title {
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
-    color:white;
+    color: white;
     font-size: 2.5rem;
 }
 
@@ -90,8 +92,9 @@ body{
 .mainContainer .content .firstContent {
     background-color: #01679B;
 }
+
 .mainContainer .content .donationLink {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.342) , rgba(0, 0, 0, 0.377)), url(https://i0.wp.com/www.giveindia.org/blog/wp-content/uploads/shutterstock_548067985.jpeg?fit=1463%2C977&ssl=1);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.377)), url(https://i0.wp.com/www.giveindia.org/blog/wp-content/uploads/shutterstock_548067985.jpeg?fit=1463%2C977&ssl=1);
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -99,11 +102,11 @@ body{
     justify-content: center;
     align-items: center;
     padding: 8px;
-    
+
 }
 
 .mainContainer .content .gallery {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.342) , rgba(0, 0, 0, 0.377)), url(https://cdn.wallpapersafari.com/63/25/HFXrUe.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.342), rgba(0, 0, 0, 0.377)), url(https://cdn.wallpapersafari.com/63/25/HFXrUe.jpg);
     background-repeat: no-repeat;
     background-position: center;
     display: flex;
@@ -111,13 +114,15 @@ body{
     justify-content: center;
     align-items: center;
     padding: 8px;
-    
+
 }
+
 .donationContent {
     padding: 10px;
     /* border: 2px solid black; */
 }
- .donationQuote {
+
+.donationQuote {
     font-size: 2.8rem;
 }
 
@@ -141,7 +146,7 @@ body{
     height: 250px;
     text-align: center;
     padding-top: 120px;
-    background:linear-gradient(rgba(0, 0, 0, 0.616) , rgba(0, 0, 0, 0.432)), url(https://img.freepik.com/free-photo/group-diverse-grads-throwing-caps-up-sky_53876-56031.jpg?size=626&ext=jpg&ga=GA1.1.1012302461.1630052366);
+    background: linear-gradient(rgba(0, 0, 0, 0.616), rgba(0, 0, 0, 0.432)), url(https://img.freepik.com/free-photo/group-diverse-grads-throwing-caps-up-sky_53876-56031.jpg?size=626&ext=jpg&ga=GA1.1.1012302461.1630052366);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -151,11 +156,11 @@ body{
     height: 250px;
     text-align: center;
     padding-top: 120px;
-    background: linear-gradient(rgba(0, 0, 0, 0.479) , rgba(0, 0, 0, 0.5)) , url(https://img.freepik.com/free-photo/four-team-members-expressing-togetherness_1262-18484.jpg?size=626&ext=jpg&ga=GA1.2.1012302461.1630052366);
+    background: linear-gradient(rgba(0, 0, 0, 0.479), rgba(0, 0, 0, 0.5)), url(https://img.freepik.com/free-photo/four-team-members-expressing-togetherness_1262-18484.jpg?size=626&ext=jpg&ga=GA1.2.1012302461.1630052366);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    
+
 }
 
 
@@ -163,9 +168,10 @@ body{
 
 @media screen and (max-width: 1200px) {
     :root {
-        --carouselWidth:100vw;
+        --carouselWidth: 100vw;
         /* font-size: 62.5%; */
     }
+
     .center {
         margin-left: 0px;
     }
@@ -176,51 +182,59 @@ body{
         font-size: 2.5rem;
     }
 }
+
 @media screen and (max-width: 940px) {
     .donationContent {
         padding: 5px;
     }
+
     .donationQuote {
         font-size: 2.2rem;
     }
 }
+
 @media screen and (max-width: 844px) {
-    
+
     :root {
         font-size: 57%;
     }
 }
+
 @media screen and (max-width: 770px) {
-    
+
     .donationQuote {
         font-size: 2rem;
-        
+
     }
 }
+
 @media screen and (max-width: 700px) {
-    
+
     .mainContainer .content {
         display: block;
-        
+
     }
+
     .sixty {
         width: 100%;
-        
+
     }
+
     .forty {
         width: 100%;
-        
+
     }
 
     .donationQuote {
         font-size: 2.8rem;
     }
+
     .donateBtn {
         font-size: 2rem;
     }
 
     :root {
-        --carouselHeight:300px; 
+        --carouselHeight: 300px;
     }
 }
 
@@ -237,7 +251,7 @@ body{
 .cdesc-container {
     background-color: #eee;
     margin: 5px 5px 4px 5px;
-    
+
     border-radius: 10px;
     /* text-align: center; */
     border: solid;
@@ -255,7 +269,7 @@ body{
 
 .cdesc {
     text-align: center;
-    margin:auto 0 auto 30px;
+    margin: auto 0 auto 30px;
 }
 
 .cdesc h1 {
@@ -282,6 +296,7 @@ body{
     .cdesc h1 {
         font-size: 1.5rem;
     }
+
     .cdesc h3 {
         font-size: 0.8rem;
     }
@@ -291,6 +306,7 @@ body{
     .cdesc h1 {
         font-size: 1.5rem;
     }
+
     .cdesc h3 {
         font-size: 0.8rem;
     }
@@ -300,6 +316,7 @@ body{
     .cdesc h1 {
         font-size: 1.5rem;
     }
+
     .cdesc h3 {
         font-size: 0.8rem;
     }
@@ -309,6 +326,7 @@ body{
     .cdesc h1 {
         font-size: 1.5rem;
     }
+
     .cdesc h3 {
         font-size: 0.8rem;
     }
@@ -318,56 +336,164 @@ body{
     .cdesc h1 {
         font-size: 1.5rem;
     }
+
     .cdesc h3 {
         font-size: 0.8rem;
     }
 }
-    /* CSS For Header ends */
+
+/* CSS For Header ends */
 
 
 
-    /* CSS for Footer */
+/* CSS for Footer */
 
-    /*Hyper Links*/
-        .hyperlink {
-            color: #ffffff;
-            text-decoration: none;
-            text-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
-            transition: text-shadow 0.3s;
-            cursor: pointer;
-        }
-        .hyperlink:hover {
-            color: #c6d6e4;
-            text-decoration: none;
-            text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
-            transition: text-shadow 0.3s;
-        }
-        /*Social Buttons Style*/
-        .sb {
-            width: 40px;
-            height: 40px;
-            border-radius: 100%;
-            box-shadow: 0 1px 0.4rem rgba(0, 0, 0, 0.5);
-            transition: box-shadow 0.3s;
-            line-height: 40px;
-            font-size: 20px;
-            text-align: center;
-            color: #ffffff;
-            cursor: hand;
-        }
-        .sb:hover {box-shadow: 0 1px 0.4rem rgba(0, 0, 0, 1.0); transition: box-shadow 0.3s;}
-        .fb {
-            background: #3B5998;
-        }
-        .tt {
-            background: #1DA1F2;
-        }
-        .in {
-            background: #0077b5;
-        }
-    
+/*Hyper Links*/
+.hyperlink {
+    color: #ffffff;
+    text-decoration: none;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 1);
+    transition: text-shadow 0.3s;
+    cursor: pointer;
+}
+
+.hyperlink:hover {
+    color: #c6d6e4;
+    text-decoration: none;
+    text-shadow: 0px 0px 0px rgba(0, 0, 0, 0);
+    transition: text-shadow 0.3s;
+}
+
+/*Social Buttons Style*/
+.sb {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    box-shadow: 0 1px 0.4rem rgba(0, 0, 0, 0.5);
+    transition: box-shadow 0.3s;
+    line-height: 40px;
+    font-size: 20px;
+    text-align: center;
+    color: #ffffff;
+    cursor: hand;
+}
+
+.sb:hover {
+    box-shadow: 0 1px 0.4rem rgba(0, 0, 0, 1.0);
+    transition: box-shadow 0.3s;
+}
+
+.fb {
+    background: #3B5998;
+}
+
+.tt {
+    background: #1DA1F2;
+}
+
+.in {
+    background: #0077b5;
+}
+
 /* form design inputs */
 .form_input {
     margin-bottom: 1rem;
     padding: 6px;
+}
+
+
+/* alumni profile Card */
+figure.snip0056 {
+    font-family: 'Raleway', Arial, sans-serif;
+    position: relative;
+    overflow: hidden;
+    margin: 10px;
+    width: 420px;
+    height: 200px;
+    background: #eae5e5;
+    color: #000000;
+}
+
+figure.snip0056 * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+figure.snip0056 img{
+    width: 100px;
+    height: 160px;
+}
+figure.snip0056>img {
+    width: 35%;
+    border-radius: 50% 0% 50% 10%;
+    border: 4px solid #ffffff;
+    -webkit-transition: all 0.21s ease-in-out;
+    transition: all 0.45s ease-in-out;
+    -webkit-transform: scale(0.2);
+    transform: scale(1.3);
+    position: relative;
+    float: right;
+    top: 7%;
+    right: 1%;
+    z-index: 5;
+    
+}
+/* 
+    
+    
+    
+    
+    
+    
+     */
+
+figure.snip0056 figcaption {
+    padding: 20px 30px 20px 20px;
+    position: absolute;
+    left: 0;
+    width: 50%;
+}
+
+figure.snip0056 figcaption h2,
+figure.snip0056 figcaption p {
+    margin: 0;
+    text-align: left;
+    padding: 10px 0;
+    width: 100%;
+}
+
+figure.snip0056 figcaption h2 {
+    font-size: 2rem;
+    font-weight: 550;
+    text-transform: uppercase;
+    border-bottom: 2px solid rgba(242, 0, 0, 0.2);
+}
+
+figure.snip0056 figcaption p {
+    font-size: 1.7rem;
+    font-weight: 800;
+    color: #0077b5;
+}
+
+figure.snip0056 figcaption p span {
+    font-size: 2rem;
+    font-weight: 500;
+    color: #000000;
+    opacity: 0.8;
+}
+
+figure.snip0056 .position {
+    width: 100%;
+    text-align: left;
+    padding: 15px 30px;
+    font-size: 0.9em;
+    opacity: 1;
+    font-style: italic;
+    color: #ffffff;
+    background: #20638f;
+    clear: both;
+}
+
+figure.snip0056:hover>img,
+figure.snip0056.hover>img {
+    right: -12%;
 }
