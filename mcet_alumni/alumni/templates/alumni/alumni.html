@@ -4,13 +4,15 @@
 <title>MCET Alumni</title>
 {% endblock title %}
 
-{% load crispy_forms_tags %}
-
 {% block content %} 
 <div class="container mb-4">
+{% if msg%}
+<div class="alert alert-primary" role="alert">
+    {{msg}}
+</div> 
+{% endif %}
     <form method="post" class="form-inline">
         {% csrf_token %}
-
         <div class="row">
             <div class="col-12 col-md-4  ">
                 <label for="{{ form.dept_name.id_for_label }}"> Department </label>
@@ -24,6 +26,19 @@
                 <button type="submit" class="btn btn-primary"> Update </button>
             </div>
         </div>
+
+        {% if alumunis %}
+        <div>
+            {% for alumni in alumunis %}
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{alumni.photo }}" alt="Card image cap">
+                <div class="card-body">
+                  <p class="card-text"> {{ alumni.name }} {{ alumni.batch }}</p>
+                  <p>{{alumni.department}}</p> 
+              </div>
+            {% endfor %}
+        </div>
+        {% endif %}
     </form>
 </div>
 {% endblock content %} 

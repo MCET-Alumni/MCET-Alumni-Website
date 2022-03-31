@@ -39,7 +39,7 @@ class Alumni(models.Model):
     phone1 = models.CharField(max_length=10, validators=[MaxLengthValidator(10)])
     phone2 = models.CharField(max_length=10, validators=[MinLengthValidator(10)], null=True, blank=True)
     current_location = models.TextField(null=True, blank=True)
-    social_site_url = models.CharField(max_length=50000, null=True, blank=True)
+    linked_url = models.CharField(max_length=50000, null=True, blank=True)
     profile_pic = models.ImageField(upload_to='profile_pics/',
                                     validators=[validate_image_size],
                                     null = True,
