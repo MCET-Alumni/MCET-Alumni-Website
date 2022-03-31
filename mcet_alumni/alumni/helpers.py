@@ -1,6 +1,6 @@
 from django.core.exceptions import ValidationError
 
-def validate_image_size(file, limit_mb = 1):
+def validate_image_size(file, limit_mb = 10):
     ''' Validate a file's size does not exceed limit size'''
 
     file_size = file.file.size

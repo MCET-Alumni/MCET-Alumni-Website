@@ -1,5 +1,6 @@
 ''' Alumni model to store the information about alumni.'''
 
+from email.policy import default
 from django.db import models
 from django.core.validators import MinLengthValidator, MaxLengthValidator, MinValueValidator
 from django.contrib.auth.models import User
@@ -35,11 +36,11 @@ class Alumni(models.Model):
     first_name = models.CharField(max_length=255)
     last_name = models.CharField(max_length=255)
     gender = models.CharField(max_length=6, choices=gender_choices)
-    email = models.EmailField(max_length=255)
+    email = models.EmailField(max_length=255, null=True, blank=True)
     phone1 = models.CharField(max_length=10, validators=[MaxLengthValidator(10)])
     phone2 = models.CharField(max_length=10, validators=[MinLengthValidator(10)], null=True, blank=True)
     current_location = models.TextField(null=True, blank=True)
-    social_site_url = models.CharField(max_length=50000, null=True, blank=True)
+    linked_url = models.CharField(max_length=50000, null=True, blank=True)
     profile_pic = models.ImageField(upload_to='profile_pics/',
                                     validators=[validate_image_size],
                                     null = True,
@@ -53,6 +54,9 @@ class Alumni(models.Model):
 
     class Meta:
         db_table = 'user'
+
+    # def save(self, *args, **kwargs):
+    #     return super(*args, **kwargs)
 
     def __str__(self) -> str:
         ''' str representation for user object.'''

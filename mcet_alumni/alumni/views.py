@@ -1,5 +1,6 @@
 from django.shortcuts import render
 
+from .models import Alumni
 from .forms import DepartmentBatchForm
 
 # Create your views here.
@@ -10,13 +11,25 @@ def alumni(request):
         if form.is_valid():
             dept_name = form.cleaned_data['dept_name']
             batch = form.cleaned_data['batch']
-            context['members'] = [
-                {'name':'Upendra Kumar', 'Batch':'1998', 'department':'CSE'},
-            ]
+            querset = Alumni.objects.filter(department = dept_name, batch=batch)
+            alumunis= []
+            for alumni in querset:
+                tmp= {}
+                tmp['name'] = alumni.first_name + ' ' + alumni.last_name
+                tmp['batch'] = alumni.batch
+                tmp['department'] = alumni.department
+                if alumni.profile_pic:
+                    tmp['photo'] = alumni.profile_pic.url
+                else:
+                    tmp['photo'] = '/media/profile_pics/default.jpg'
+                tmp['linked_url'] = alumni.linked_url
+                alumunis.append(tmp)
+            context['alumunis'] = alumunis
         return render(request, 'alumni/alumni.html', context)
     else:
         form = DepartmentBatchForm()
-        return render(request, 'alumni/alumni.html', {'form':form})
+        msg = "Please select department and batch."
+        return render(request, 'alumni/alumni.html', {'form':form, 'msg':msg})
 
 def notable_alumni(request):
     return render(request, 'alumni/notable_alumni.html')

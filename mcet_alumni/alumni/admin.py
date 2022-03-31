@@ -15,7 +15,7 @@ class AlumniAdmin(admin.ModelAdmin):
             'fields':(('batch', 'department'),)
         }),
         ('Personal Details', {
-            'fields':(('first_name', 'last_name'), ('phone1', 'phone2'),('email', 'gender'), ('social_site_url', 'profile_pic'),'current_location')
+            'fields':(('first_name', 'last_name'), ('phone1', 'phone2'),('email', 'gender'), ('linked_url', 'profile_pic'),'current_location')
         }),
         ('Admin Action', {
             'fields':(('status','added_by', 'add_date'),('last_modified', 'modified_by'))
