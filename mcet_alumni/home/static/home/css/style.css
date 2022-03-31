@@ -13,12 +13,9 @@ body {
 :root {
     --carouselWidth: 70vw;
     font-size: 62.5%;
-<<<<<<< HEAD
     --carouselHeight:650px;
     --carouselHeight2:800px;
-=======
     --carouselHeight: 500px;
->>>>>>> 2a070bcb0583720deb5ece2a32418a55c412af68
 }
 
 .navbar {
@@ -49,6 +46,8 @@ body {
 
 .carousel-alumni-img img {
     height: var(--carouselHeight2);
+}
+
 .carousel-item img {
     height: var(--carouselHeight);
 
@@ -413,7 +412,6 @@ body {
     padding: 6px;
 }
 
-<<<<<<< HEAD
 /* Gallery Page styling */
   .gallery-container {
     margin: auto;
@@ -463,7 +461,6 @@ body {
     left: 0;
     min-height: 300px;
 }
-=======
 
 /* alumni profile Card */
 figure.snip0056 {
@@ -560,4 +557,3 @@ figure.snip0056:hover>img,
 figure.snip0056.hover>img {
     right: -12%;
 }
->>>>>>> 2a070bcb0583720deb5ece2a32418a55c412af68
