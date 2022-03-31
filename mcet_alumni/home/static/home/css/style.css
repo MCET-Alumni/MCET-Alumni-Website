@@ -11,7 +11,8 @@ body{
 :root {
     --carouselWidth:70vw;
     font-size: 62.5%;
-    --carouselHeight:500px;
+    --carouselHeight:650px;
+    --carouselHeight2:800px;
 }
 
 .navbar 
@@ -35,10 +36,13 @@ body{
     
 }
 
-.carousel-item img
+.carousel-home-img img
 {
     height: var(--carouselHeight);
-    
+}
+
+.carousel-alumni-img img {
+    height: var(--carouselHeight2);
 }
 
 .mainContainer 
@@ -411,3 +415,13 @@ body{
     }
   }
   
+  .carousel .item{
+    height: 300px;
+}
+
+.item img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 300px;
+}
