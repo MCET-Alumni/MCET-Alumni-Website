@@ -15,7 +15,6 @@ body {
     font-size: 62.5%;
     --carouselHeight:650px;
     --carouselHeight2:800px;
-    --carouselHeight: 500px;
 }
 
 .navbar {
