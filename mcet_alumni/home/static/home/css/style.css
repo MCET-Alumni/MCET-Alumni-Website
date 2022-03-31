@@ -47,10 +47,6 @@ body {
     height: var(--carouselHeight2);
 }
 
-.carousel-item img {
-    height: var(--carouselHeight);
-
-}
 
 .mainContainer {
     display: flex;
