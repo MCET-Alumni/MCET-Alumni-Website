@@ -14,11 +14,10 @@ body {
     --carouselWidth: 70vw;
     font-size: 62.5%;
     --carouselHeight:650px;
-<<<<<<< HEAD
-=======
+
     --carouselHeight2:800px;
+
     --carouselHeight: 500px;
->>>>>>> 90400990dfef9f1ea1289da43a506c152b1a156e
 }
 
 .navbar {
