@@ -11,7 +11,7 @@ def alumni(request):
         if form.is_valid():
             dept_name = form.cleaned_data['dept_name']
             batch = form.cleaned_data['batch']
-            querset = Alumni.objects.filter(department = dept_name, batch=batch)
+            querset = Alumni.objects.filter(department = dept_name, batch=batch, status = 'Approved')
             alumunis= []
             for alumni in querset:
                 tmp= {}
