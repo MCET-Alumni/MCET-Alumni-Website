@@ -5,7 +5,131 @@
 {% endblock title %}
 
 {% block content %}
+
+<!-- CSS Styling for Donation Page -->
+<style>
+
+.donationContainer {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: auto;
+    /* text-align: center; */
+    /* background-color:#9C52E0; */
+  }
+  .donationContainer .donationMainContent {
+      width: 48%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 15px;
+    /* border:  2px solid brown; */
+  }
+  .accountDetails {
+      width: 48%;
+    display: flex;
+    flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 10px 15px;
+    /* border: 2px solid white */
+  }
+  .donationContainer .donationMainContent h4 {
+      font-weight: 400;
+    font-size: 3.5rem;
+    color: #0570a7;
+    font-family: sans-serif;
+  }
+  .donationContainer .accountDetails .title {
+    font-size: 3.5rem;
+    margin-top: 1rem;
+    color: rgb(95, 90, 90);
+    /* font-family: f; */
+    /* color: #3A3845; */
+  }
+
+  .donationContainer .accountDetails p {
+    font-size: 2.5rem;
+    color: #0570a7;
+  }
+  .donationContainer .accountDetails p span {
+    color: grey;
+    font-weight: 500;
+  }
+  .donationContainer .accountDetails p .ifscMessage {
+    color: rgb(250, 86, 86);
+  }
+
+  @media screen and (max-width: 1000px) {
+    .donationContainer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    margin: auto;
+    /* text-align: center; */
+    /* background-color:#9C52E0; */
+  }
+    .donationContainer .donationMainContent {
+      width: 100%;
+    }
+    
+    .accountDetails {
+        width: 100%;
+    }
+  }
+
+
+  @media screen and (max-width: 990px) {
+    .donationContainer .donationMainContent {
+      font-size: 3.5rem;
+    }
+  }
+  @media screen and (max-width: 700px) {
+    
+    .donationContainer .donationMainContent {
+      font-size: 3rem;
+    }
+    
+  }
+  @media screen and (max-width: 350px) {
+    .donationContainer .donationMainContent {
+      font-size: 2.4rem;
+    }
+  }
+</style>
+<!-- CSS Styling Ends -->
+
+<!-- COntent of Donation Page starts here -->
+
 <div>
-    <h2> This is donation page </h2>
+    <div class="donationContainer">
+        <div class="donationMainContent">
+          <h4>
+            Alone we can do so little, together we can do so much. <br />
+            So please donate on the below Account details.
+          </h4>
+        </div>
+        <!-- <hr> -->
+        <div class="accountDetails">
+          <h3 class="title">Account Details</h3>
+          <!-- <div class="underline"></div> -->
+          <p class="accountNumber">Account Number: <span>00450100017422</span></p>
+          <p>
+            IFSC Code:
+            <span
+              >BARB0BEHRAM
+              <span class="ifscMessage">[ Fifth Character is Zero. ]</span></span
+            >
+          </p>
+          <p class="accountNumber">Account Name: <span>MCET ALUMNI</span></p>
+          <p class="accountNumber">
+            Branch Name: <span>BERHAMPORE, WEST BENGAL</span>
+          </p>
+        </div>
+      </div>
 </div>
 {% endblock content %}
