@@ -31,8 +31,8 @@ def alumni(request):
         msg = "Please select department and batch."
         return render(request, 'alumni/alumni.html', {'form':form, 'msg':msg})
 
-def notable_alumni(request):
-    return render(request, 'alumni/notable_alumni.html')
+def alumni_speaks(request):
+    return render(request, 'alumni/alumuni_speaks.html')
 
 def register(request):
     return render(request, 'alumni/register.html')
