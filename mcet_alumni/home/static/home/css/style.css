@@ -14,7 +14,10 @@ body {
     --carouselWidth: 70vw;
     font-size: 62.5%;
     --carouselHeight:650px;
+
     --carouselHeight2:800px;
+
+    --carouselHeight: 500px;
 }
 
 .navbar {
@@ -418,7 +421,7 @@ body {
   img {
     max-width: 100%;
   }
-  img:hover {
+  .gal-img:hover {
     opacity: 0.5;
     cursor: pointer;
   }
