@@ -85,6 +85,18 @@ body {
     /* text-align: center; */
     padding: 10px;
 }
+.gallery-heading{
+    font-weight: 800;
+    font-size: 3rem;
+    color:#00679b;
+    margin-left: 40%;
+
+}
+.gallery-hr-head{
+    width: 40%;
+    margin: auto;
+    margin-bottom: 20px;
+}
 
 .mainContainer .content .title {
     /* font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; */
