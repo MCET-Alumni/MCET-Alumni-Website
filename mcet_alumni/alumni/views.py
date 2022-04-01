@@ -1,7 +1,7 @@
 from django.shortcuts import render
 
 from .models import Alumni, Gallery
-from .forms import DepartmentBatchForm
+from .forms import DepartmentBatchForm, BatchForm
 
 # Create your views here.
 def alumni(request):
@@ -38,7 +38,13 @@ def register(request):
     return render(request, 'alumni/register.html')
 
 def gallery(request):
-    batch = request.POST.get('batch', 2002)
+    batch = 2002
+    if request.method == 'POST':
+        batch = request.POST.get('batch', 2002)
+    form = BatchForm({'batch':batch})
     queryset = Gallery.objects.filter(batch = batch)
     photos_urls = [obj.photo.url for obj in queryset]
-    return render(request, 'alumni/gallery.html', {'photos_urls':photos_urls}) 
+    empty = False 
+    if not photos_urls:
+        empty = True
+    return render(request, 'alumni/gallery.html', {'photos_urls':photos_urls, 'empty':empty, 'form':form}) 

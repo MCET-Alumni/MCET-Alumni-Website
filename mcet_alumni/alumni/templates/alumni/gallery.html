@@ -1,17 +1,45 @@
 {% extends "home/index.html" %}
+{% load static %}
 
 {% block title %}
 <title>MCET Gallery </title>
 {% endblock title %}
 
 {% block content %}
-<div class="mb-3">
+<div class="container mb-3">
+    <div class="container m-2">
+        <form method="post" class="form-inline">
+            {% csrf_token %}
+            <div class="row">
+                <div class="col-12 col-3 col-md-2 ">
+                    <label for="{{ form.semester.id_for_label }}"> Batch </label>
+                    {{ form.batch }}
+                </div>
+                <div class="col-12 col-md-2  pt-3">
+                    <button type="submit" style="font-size: 10px;" class="btn btn-primary mt-2"> See photos  </button>
+                </div>
+            </div>
+        </form>
+    </div>
+    {% if empty%}
+    <div class="container">
+        <div class="alert alert-primary" role="alert">
+            <div class="row">
+                <span  class="text-center" style='font-size:100px;'>&#128577;</span>
+            </div>
+            <div class="row">
+                <h3 class="text-center"> Dear Alumni,Photos of this batch are not availble to us .Please send the photos to alumniofmcet@gmail.com</h3>
+            </div>
+          </div>
+    </div>
+    {% else %}
     <div class="container">
         <div class="img-grid">
             {% for url in photos_urls %}
-            <img class="gal-img" src="{{ url }}" alt="">
+            <a href="{{url}}"><img class="gal-img" src="{{ url }}" alt=""> </a>
             {% endfor %}
         </div>
     </div>
+    {% endif %}
 </div>
 {% endblock content %}

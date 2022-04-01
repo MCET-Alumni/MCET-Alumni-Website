@@ -47,6 +47,7 @@ body {
 }
 
 .carousel-alumni-img img {
+    
     height: var(--carouselHeight2);
 }
 
@@ -555,3 +556,6 @@ figure.snip0056:hover>img,
 figure.snip0056.hover>img {
     right: -1%;
 }
+
+
+/* Styles for gallery page */
