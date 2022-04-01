@@ -8,6 +8,7 @@
 
 body {
     background-color: rgb(184, 236, 232);
+    font-size: 1.6rem;
 }
 
 :root {
@@ -554,4 +555,11 @@ figure.snip0056 .position {
 figure.snip0056:hover>img,
 figure.snip0056.hover>img {
     right: -1%;
+}
+
+/* Logo Page Design */
+
+.m-about-logo{
+    font-size: 1.6rem;
+    color: #007EB8;
 }

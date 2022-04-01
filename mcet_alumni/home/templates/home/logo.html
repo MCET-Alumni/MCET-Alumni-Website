@@ -1,9 +1,25 @@
 {% extends "home/index.html" %}
+{% load static%}
 
 {% block title %}
 <title>MCET logo </title>
 {% endblock title %}
 
-{% block content %} 
-<h2> This is about logo </h2>
+{% block content %}
+
+<div class="container alert-primary">
+    <h1 class="text-center mt-3 pt-4" style="color: #4F4F4F;"> About Logo </h1>
+    <div class="row mt-4 mb-4">
+        <img class="col-md-6, col-lg-6 col-xl-6 col-sm-12" src="{% static 'home/images/ALUMNI LOGO.png' %}" alt="mcet-alumni-logo">
+        <div class="col-md-6, col-lg-6 col-xl-6 col-sm-12">
+            <h2 style="color: #4F4F4F;"> <u> Concept</u></h2>
+            <p class="m-about-logo">Our alumni logo is inspired from the letter 'M' which is already used in the existing logo of MCET. 
+                <br><br>The logo/identity is a combined depiction of <b>flame</b>, flower and continuity 
+                <br><br> The 'M' transforming into flame which symbolises power. 
+                <br> <b> Why flower?</b> Well, The beauty in a flower evokes unexpressed thoughts and feelings that are sometimes difficult to find words for, it also symbolises love, friendship, accomplishment and sympathy which perfectly solves the purpose of alumni association. Because we all have very good memories attached with MCET and <b>we all want MCET to grow</b> </p>
+        </div>
+    </div>
+    
+</div> 
+
 {%endblock content %}
