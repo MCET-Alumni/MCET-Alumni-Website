@@ -48,6 +48,7 @@ body {
 }
 
 .carousel-alumni-img img {
+    
     height: var(--carouselHeight2);
 }
 
