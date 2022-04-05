@@ -14,12 +14,12 @@ class DepartmentBatchForm(forms.Form):
     ('it', 'Information Technology')
     )
     dept_name = forms.ChoiceField(
-        widget=forms.Select(attrs={'class':'form-control','id':'dept_name', 'placeholder':'Choose Department'}),
+        widget=forms.Select(attrs={'class':'form-control font-100','id':'dept_name', 'placeholder':'Choose Department'}),
         choices=department_choices, 
         required=False
         )
     batch = forms.ChoiceField(
-        widget=forms.Select(attrs={'class':'form-control','id':'semester', 'placeholder':'Choose Semester'}), 
+        widget=forms.Select(attrs={'class':'form-control font-100','id':'semester', 'placeholder':'Choose Semester'}), 
         choices=sem_choices, 
         required=False
         )
@@ -27,7 +27,7 @@ class DepartmentBatchForm(forms.Form):
 class BatchForm(forms.Form):
     ''' Form to get batch '''
     batch = forms.ChoiceField(
-        widget=forms.Select(attrs={'class':'form-control','id':'semester', 'placeholder':'Choose Semester'}), 
+        widget=forms.Select(attrs={'class':'form-control font-100','id':'semester', 'placeholder':'Choose Semester'}), 
         choices=sem_choices, 
         required=False
         )
